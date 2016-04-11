@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Sanyara Ermoshin](https://up.htmlacademy.ru/htmlcss/13/user/178367).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Будников](https://up.htmlacademy.ru/htmlcss/13/user/18605).
 
 ---
 
