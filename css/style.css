@@ -1,0 +1,48 @@
+
+.theme-slider input[type="radio"] {
+    display:none;
+}
+.theme-slider-controls {
+   position: absolute;
+   left: 150px;
+}
+.theme-slider-controls label {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+    margin-right: 10px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#btn-1:checked ~ .theme-slider-controls label[for="btn-1"],
+#btn-2:checked ~ .theme-slider-controls label[for="btn-2"],
+#btn-3:checked ~ .theme-slider-controls label[for="btn-3"] {
+	background-color: #fff;
+}
+#btn-1:checked ~ .body-wrapper {
+	background-color: #a1b6aa;
+}
+#btn-2:checked ~ .body-wrapper {
+	background-color: #8996a6;
+}
+#btn-3:checked ~ .body-wrapper {
+	background-color: #9d8b84;
+}
+
+
+#btn-1:checked ~ .body-wrapper main .slider-content::before {
+	 content: attr(data-title-1);
+     height: 30px;
+     width: 30px;
+}
+#btn-2:checked ~ .body-wrapper main .slider-content::before {
+	 content: attr(data-title-2);
+     height: 30px;
+     width: 30px;
+}
+#btn-3:checked ~ .body-wrapper main .slider-content::before {
+	 content: attr(data-title-3);
+     height: 30px;
+     width: 30px;
+}
