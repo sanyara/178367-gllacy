@@ -69,12 +69,12 @@
                        <a href="">Сливочное</a>
                    </div>
                 </header>
-                <main>
+                <main class="main">
                     <section class="catalog">
                         <h1>Сливочное мороженное</h1>
                         <form class="filter-options">
                             <div class="filter-options-sorting">
-                                <label for="sorting">Сортировка</label>
+                                <label class="filter-title">Сортировка</label>
                                 <select id="sorting" name="sorting">
                                     <option>по популярности</option>
                                     <option>сначала недорогие</option>
@@ -83,8 +83,7 @@
                                 </select>
                             </div>
                             <div class="filter-options-price">
-                                <p>Цена: <output name="min-price">100 руб.</output>-
-                                    <output name="max-price">500 руб.</output></p>
+                                <span class="filter-title">Цена: 100 руб. - 500 руб.</span>
                                 <div class="range-controls">
                                     <div class="scale">
                                         <div class="bar"></div>
@@ -94,42 +93,42 @@
                                 </div>
                             </div>
                             <div class="filter-options-fat">
-                                <p>Жирность:</p>
-                                <div>
+                                <span class="filter-title">Жирность:</span>
+                                <div class="field-radio">
                                     <input type="radio" name="fat-content" id="radio-1">
                                     <label for="radio-1">0%</label>
                                 </div>
-                                <div>
+                                <div class="field-radio">
                                     <input type="radio" name="fat-content" id="radio-2">
                                     <label for="radio-2">до 10%</label>
                                 </div>
-                                <div>
+                                <div class="field-radio">
                                     <input type="radio" name="fat-content" id="radio-3">
                                     <label for="radio-3">до 30%</label>
                                 </div>
-                                <div>
+                                <div class="field-radio">
                                     <input type="radio" name="fat-content" id="radio-4">
                                     <label for="radio-4">выше 30%</label>
                                 </div>
                             </div>
                             <div class="filter-options-filling">
-                                <div>   
+                                <div class="field-checkbox">   
                                     <input type="checkbox" id="checkbox-1">
                                     <label for="checkbox-1">шоколадные</label>
                                 </div>
-                                <div>
+                                <div class="field-checkbox">
                                     <input type="checkbox" id="checkbox-2">
                                     <label for="checkbox-2">сахарные присыпки</label>
                                 </div>
-                                <div>
+                                <div class="field-checkbox">
                                     <input type="checkbox" id="checkbox-3">
                                     <label for="checkbox-3">фрукты</label>
                                 </div>
-                                <div>
+                                <div class="field-checkbox">
                                     <input type="checkbox" id="checkbox-4">
                                     <label for="checkbox-4">сиропы</label>
                                 </div>
-                                <div>
+                                <div class="field-checkbox">
                                     <input type="checkbox" id="checkbox-5">
                                     <label for="checkbox-5">джемы</label>
                                 </div>
@@ -137,23 +136,68 @@
                             <input type="submit" id="filter-submit-btn" name="filter-submit-btn" value="Применить">
                             <label class="filter-submit-btn" for="filter-submit-button">Применить</label>
                         </form>
-                        <div class="catalog-items">
-                            <div class="item ">
+                        <div class="catalog-list">
+
+                            <div class="catalog-item">
+                                <img src="" alt="">
                                 <p class="item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой<p>
                                 <a class="btn item-preview" href="#">Быстрый просмотр</a>
                             </div>
-                            <div class="item">
+                            <div class="catalog-item">
+                                    <img src="" alt="">
+                                    <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                    <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                    <img src="" alt="">
+                                    <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                    <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                    <img src="" alt="">
+                                    <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                    <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
+                                <p class="item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой<p>
+                                <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
                                 <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
                                 <a class="btn item-preview" href="#">Быстрый просмотр</a>
                             </div>
-                            <div class="item">
+                            <div class="catalog-item">
+                                <img src="" alt="">
                                 <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
                                 <a class="btn item-preview" href="#">Быстрый просмотр</a>
                             </div>
-                            <div class="item">
+                            <div class="catalog-item">
+                                <img src="" alt="">
                                 <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
                                 <a class="btn item-preview" href="#">Быстрый просмотр</a>
-                            </div> 
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
+                                <p class="item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой<p>
+                                <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
+                                <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
+                                <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
+                            <div class="catalog-item">
+                                <img src="" alt="">
+                                <p class="item-title">Сливочно-кофейное с кусочками шоколада</p>
+                                <a class="btn item-preview" href="#">Быстрый просмотр</a>
+                            </div>
                         </div>
                         <div class="paginator">
                              <a class="prev" href="#">Назад</a>

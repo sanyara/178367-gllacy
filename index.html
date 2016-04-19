@@ -15,58 +15,96 @@
                 <label for="btn-2"></label>
                 <label for="btn-3"></label>
             </div>
-            <div class="body-wrapper">
+            <div class="container">
                 <header class="main-header">
                     <img class="main-logo" src="img/gllacy-logo.png" width="154" height="64" alt="Глейси логотип">
-                    <nav class="main-navigation">
-                        <ul class="main-menu">
-                            <li>
+                    <nav class="main-menu">
+                        <ul class="main-list">
+                            <li class="main-menu-item">
                                 <a href="#">Каталог</a>
-                                <ul class="catalog-menu">
-                                    <li>
-                                        <a href="#">Новинки</a>
-                                        <ul class="catalog-sub-menu">
-                                            <li><a href="">Сливочное</a></li>
-                                            <li><a href="">Щербеты</a></li>
-                                            <li><a href="">Фруктовый лед</a></li>
-                                            <li><a href="">Мелорин</a></li>
-                                        </ul>    
-                                    </li>        
-                                </ul>
+                                <ul class="main-submenu">
+                                    <li class="main-submenu-item"><a href="#">Новинки</a></li>
+                                    <li class="main-submenu-item"><a href="">Сливочное</a></li>
+                                    <li class="main-submenu-item"><a href="">Щербеты</a></li>
+                                    <li class="main-submenu-item"><a href="">Фруктовый лед</a></li>
+                                    <li class="main-submenu-item"><a href="">Мелорин</a></li>
+                                </ul>      
                             </li>
-                            <li>
+                            <li class="main-menu-item">
                                 <a href="#">Доставка и оплата</a>
                             </li>
-                            <li>
+                            <li class="main-menu-item">
                                 <a href="#">О компании</a>
                             </li>            
                         </ul>
                     </nav>
-                    <div class="user-block"></div>
-                        <a class="search-btn" href="#">Поиск</a>
-                        <form class="search-form">
-                            <input type="text" name="search" placeholder="Что ищем?" required>
-                        </form>
-                        <a class="login-btn" href="#">Вход</a>
-                        <form class="login-form">
-                            <input type="email" name="login-mail" placeholder="Электронная почта" required>
-                            <input type="password" name="login-mail" placeholder="Пароль" required>
-                            <input type="submit" id="login-btn" name="login-btn" value="Войти">
-                            <label class="btn login-btn" for="login-btn">Войти</label>
-                            <a href="#">Забыли пароль?</a>
-                            <a href="#">Новая регистрация</a>
-                        </form>
-                        <a class="cart-btn" href="#">Корзина</a>
+                    <div class="user-block">
+                        <div class="user-block-search">
+                            <a class="search-btn" href="#">Поиск</a>
+                            <form class="search-form">
+                                <input type="text" name="search" placeholder="Что ищем?" required>
+                            </form>
+                        </div>
+
+                        <div class="user-login">
+                            <a class="login-btn" href="#">Вход</a>
+                            <form class="login-form">
+                                <input type="email" name="login-mail" placeholder="Электронная почта" required>
+                                <input type="password" name="login-mail" placeholder="Пароль" required>
+                                <input type="submit" id="login-btn" name="login-btn" value="Войти">
+                                <label class="btn login-btn" for="login-btn">Войти</label>
+                                <a href="#">Забыли пароль?</a>
+                                <a href="#">Новая регистрация</a>
+                            </form>
+                        </div>
+                        <div class="user-basket">
+                            <a class="basket-btn" href="#">Корзина</a>
+                            <div class="basket">
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Пломбир с апельсиновым джемом</td>
+                                        <td>1,5 кг х 200 руб.</td>
+                                        <td>300 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                                        <td>1,5 кг х 300 руб</td>
+                                        <td>450 руб.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                        <td><b>Итого: 750руб.</b></td>
+                                    </tr>
+                                </table>
+                                <a class="btn place-order-btn" href="#">Разместить заказ</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="store-info">
                         <span>С 10 до 20, ежедневно</span>
                         <span>8 812 450-25-25</span>
                     </div>
                 </header>
-                <main>
-                    <section class="slider-content" data-title-1="Крем брюле и пломбир с малиновым джемом"
+                <main class="main">
+                    <section class="slider" data-title-1="Крем брюле и пломбир с малиновым джемом"
                                                     data-title-2="Шоколадный пломбир и лимонный сорбет" 
                                                     data-title-3="Пломбир с помадкой и клубничный щербет">
-                        <a class="btn buy-both" href="#">Давайте оба!</a>
+                        <div class="slider-item">
+                            <img src="" alt="">
+                            <a class="btn buy-both" href="#">Давайте оба!</a>
+                        </div>
+                        <div class="slider-item">
+                            <img src="" alt="">
+                            <a class="btn buy-both" href="#">Давайте оба!</a>
+                        </div>
+                        <div class="slider-item">
+                            <img src="" alt="">
+                            <a class="btn buy-both" href="#">Давайте оба!</a>
+                        </div>
                     </section>
                     <section class="special-offer">
                         <div class="special-offer-card raspberry-card">
@@ -122,28 +160,33 @@
                         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и 
                             не слать всякой не нужной ерунды. Честно =)</p>
                         <form class="subscribe-form">
-                            <input class="email" type="email" name="email" placeholder="введите email" required> 
-                            <input type="submit" id="subscribe-btn" name="subscribe-btn">
-                            <label class="btn subscribe-btn" for="subscribe-btn">Отправить</label>  
+                            <input type="submit" id="subscribe-btn" class="btn" name="subscribe-btn" value="Отправить">
+                            <div class="field">
+                                <input class="email" type="email" name="email" placeholder="введите email" required> 
+                            </div>
                         </form>
                     </section>
                     <section class="contacts">
-                        <p>Адрес главного офиса и офлайн магазина:
+                        <p>Адрес главного офиса и офлайн магазина: <br>
                             <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
-                        <p>Для заказов по телефону:
+                        <p>Для заказов по телефону: <br>
                             <span>8 812 450-25-25</span>
                             (с 10 до 20 ежедневно)</p>
-                        <a class="btn leave-feedback">
+                        <a href="#" class="btn leave-feedback">кнопка</a>
                         <form class="feedback-form">
-                            <p>Мы обязательно вам ответим!</p>
+                            <span class="feedback-form-title">Мы обязательно вам ответим!</span>
                             <input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
                             <input type="email" name="feedback-mail" placeholder="Как вас зовут?" required>
                             <textarea name="feedback-content" placeholder="Напишите что-нибудь..."></textarea>
-                            <input type="submit" id="feedback-btn" name="feedback-btn">
-                            <label class="btn feedback-btn" for="feedback-btn">Отправить<label>
+                            <input type="submit" id="feedback-btn" class="btn" name="feedback-btn" value="Отправить">
                         </form>
                     </section>
                 </main>
+            </div>
+            <div class="map">
+                <!-- карта -->
+            </div>
+            <div class="container">
                 <footer class="main-footer">
                     <div class="footer-social">
                         <a class="social-btn social-btn-twit" href="#">Твиттер</a>
