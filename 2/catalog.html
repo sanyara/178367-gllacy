@@ -8,8 +8,10 @@
 </head>
     <body>
         <div class="container">
-            <header class="main-header">
-                <a class="main-logo" href="index.html"><img src="img/gllacy-logo.svg" width="154" height="64" alt="Логотип «Глейси»"></a>
+            <header class="main-header clearfix">
+                <div class="main-logo">
+                    <a class="main-logo-link" href="index.html"><img src="img/gllacy-logo.svg" width="154" height="64" alt="Логотип «Глейси»"></a>
+                </div>
                 <nav class="main-menu">
                     <ul class="main-list">
                         <li class="main-menu-item">
@@ -75,8 +77,8 @@
                     </div>
 				</div>
                 <div class="store-info">
-                    <span class="store-worktime">С 10 до 20, ежедневно</span>
-                    <span class="store-tel">8 812 450-25-25</span>
+                    <span class="store-worktime">С 10 до 20, ежедневно</span><br>
+                    <span class="store-tel">8 812 450-25-25</span> 
                 </div>
                 <div class="breadcrumbs">
                     <a href="#">Главная</a>
@@ -86,71 +88,74 @@
             </header>
             <main class="main">
                 <section class="catalog">
-                    <h1>Сливочное мороженное</h1>
-                    <form class="filter-options">
-                        <div class="filter-options-sorting">
-                            <label class="filter-title" for="sorting">Сортировка</label>
-                            <select id="sorting" name="sorting">
-                                <option>по популярности</option>
-                                <option>сначала недорогие</option>
-                                <option>сначала дорогие</option>
-                                <option>по жирности</option>
-                            </select>
-                        </div>
-                        <div class="filter-options-price">
-                            <span class="filter-title">Цена: 100 руб. - 500 руб.</span>
-                            <div class="range-controls">
-                                <div class="scale">
-                                    <div class="bar"></div>
+                <h1 class="main-title">Сливочное мороженное</h1>
+                    <div class="catalog-filter">
+                        <form class="filter-options">
+                            <div class="filter-options-sorting">
+                                <label class="filter-title" for="sorting">Сортировка</label>
+                                <select id="sorting" name="sorting">
+                                    <option>по популярности</option>
+                                    <option>сначала недорогие</option>
+                                    <option>сначала дорогие</option>
+                                    <option>по жирности</option>
+                                </select>
+                            </div>
+                            <div class="filter-options-price">
+                                <span class="filter-title">Цена: 100 руб. - 500 руб.</span>
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="toggle min-toggle"></div>
+                                    <div class="toggle max-toggle"></div>
                                 </div>
-                                <div class="toggle min-toggle"></div>
-                                <div class="toggle max-toggle"></div>
                             </div>
-                        </div>
-                        <div class="filter-options-fat">
-                            <span class="filter-title">Жирность:</span>
-                            <div class="field-radio">
-                                <input type="radio" name="fat-content" id="radio-1">
-                                <label for="radio-1">0%</label>
+                            <div class="filter-options-fat">
+                                <span class="filter-title">Жирность:</span>
+                                <div class="field-radio">
+                                    <input type="radio" name="fat-content" id="radio-1">
+                                    <label for="radio-1">0%</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input type="radio" name="fat-content" id="radio-2">
+                                    <label for="radio-2">до 10%</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input type="radio" name="fat-content" id="radio-3">
+                                    <label for="radio-3">до 30%</label>
+                                </div>
+                                <div class="field-radio">
+                                    <input type="radio" name="fat-content" id="radio-4">
+                                    <label for="radio-4">выше 30%</label>
+                                </div>
                             </div>
-                            <div class="field-radio">
-                                <input type="radio" name="fat-content" id="radio-2">
-                                <label for="radio-2">до 10%</label>
+                            <div class="filter-options-filling">
+                                <span class="filter-title">Наполнители:</span>
+                                <div class="field-checkbox">   
+                                    <input type="checkbox" id="checkbox-1">
+                                    <label for="checkbox-1">шоколадные</label>
+                                </div>
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="checkbox-2">
+                                    <label for="checkbox-2">сахарные присыпки</label>
+                                </div>
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="checkbox-3">
+                                    <label for="checkbox-3">фрукты</label>
+                                </div>
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="checkbox-4">
+                                    <label for="checkbox-4">сиропы</label>
+                                </div>
+                                <div class="field-checkbox">
+                                    <input type="checkbox" id="checkbox-5">
+                                    <label for="checkbox-5">джемы</label>
+                                </div>
                             </div>
-                            <div class="field-radio">
-                                <input type="radio" name="fat-content" id="radio-3">
-                                <label for="radio-3">до 30%</label>
-                            </div>
-                            <div class="field-radio">
-                                <input type="radio" name="fat-content" id="radio-4">
-                                <label for="radio-4">выше 30%</label>
-                            </div>
-                        </div>
-                        <div class="filter-options-filling">
-                            <div class="field-checkbox">   
-                                <input type="checkbox" id="checkbox-1">
-                                <label for="checkbox-1">шоколадные</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="checkbox-2">
-                                <label for="checkbox-2">сахарные присыпки</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="checkbox-3">
-                                <label for="checkbox-3">фрукты</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="checkbox-4">
-                                <label for="checkbox-4">сиропы</label>
-                            </div>
-                            <div class="field-checkbox">
-                                <input type="checkbox" id="checkbox-5">
-                                <label for="checkbox-5">джемы</label>
-                            </div>
-                        </div>
-                        <input type="submit" id="filter-submit-btn" name="filter-submit-btn" value="Применить">
-                    </form>
-                    <div class="catalog-list">
+                            <input type="submit" id="filter-submit-btn" name="filter-submit-btn" value="Применить">
+                        </form>
+                    </div>
+                    <div class="catalog-list clearfix">
                         <div class="catalog-item">
                             <img class="item-pic" src="img/1-1.png" width="267" height="267" alt="Фото">
                             <p class="item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой<p>
@@ -222,7 +227,7 @@
                     </div>
                 </section>
             </main>
-            <footer class="main-footer">
+            <footer class="main-footer clearfix">
                 <div class="footer-social">
                     <a class="social-btn social-btn-twit" href="#">Твиттер</a>
                     <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
