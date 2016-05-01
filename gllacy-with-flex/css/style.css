@@ -1,3 +1,4 @@
+
 /*
 @font-face { 
   font-family: "Roboto"; 
@@ -198,7 +199,7 @@ h3 {
 }
 .slider {
     
-    outline: 1px solid rgba(115, 222, 131, 0.42);;
+    
     width: 100%;
     margin-bottom: 28px;
 }
@@ -248,7 +249,7 @@ h3 {
 
 .hits {
     
-    margin-bottom: 23px;
+    margin-bottom: 53px;
    
     display: flex;
     justify-content: space-between;
@@ -263,7 +264,9 @@ h3 {
     
 }
 .catalog-item {
-    background-color: rgba(115, 222, 131, 0.42);
+    
+    
+    
     /*width: 267px;*/
     width: 23.2%;
     min-height: 200px;
@@ -394,17 +397,6 @@ input[type="radio"],
 
 
 
-
-
-
-.hits-item::before {
-    content: "";
-    display: block;
-    width: 61px;
-    height: 61px; 
-    border-radius: 50%;
-    background: url("../img/hit.jpg") no-repeat;
-}
 
 
 .range-controls{
@@ -657,28 +649,37 @@ input[type="radio"],
 .slider-item:nth-of-type(2) .slider-item-title {
     left: 17px;
 }
+.btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    background: linear-gradient(#f26843, #e74b36);
+    box-shadow: 0px 2px 2px rgba(172, 16, 0 , 0.64);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.btn:hover {
+    background: linear-gradient(#f58669, #ec6f5e);
+}
+.btn:active {
+    background: linear-gradient(#d74531, #e1613e);
+    box-shadow: inset 0px 2px 2px #942718;
+}
 .buy-both {
     position: absolute;
     top: 414px;
     left: 204px;
     z-index: 3;
     
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    
-    display: inline-block;
     padding: 8px 41px 11px;
-    
     font-size: 32px;
     line-height: 44px;
-    
-    font-weight: bold;
-    background: linear-gradient(#f26843, #e74b36);
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76),
                  -1px -1px 5px rgba(61, 61, 46, 0.34),
-                 1px 1px 5px rgba(61, 61, 46, 0.34);
-    box-shadow: 0px 2px 2px rgba(172, 16, 0 , 0.64);            
+                 1px 1px 5px rgba(61, 61, 46, 0.34);       
 }
 
 .buy-both:hover {
@@ -732,28 +733,109 @@ input[type="radio"],
     position: absolute;
     right: 20px;
     bottom: 24px;
-    
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    
-    display: inline-block;
     padding: 10px 22px 11px;
-    font-size: 18px;
-    line-height: 24px;
-    /*margin-right: 2px;*/
-    /*margin-bottom: 8px;*/
-    
-    font-weight: bold;
-    
     background: linear-gradient(#f16742, #e54a35);
     box-shadow: 0px 2px 2px rgba(172, 16, 0 , 0.64); 
+}
+
+
+
+
+.catalog-item {
+    position: relative;
     
 }
-.want-it:hover {
-    background: linear-gradient(#f58669, #ec6f5e);
+
+.item-wrapper {
+    position: relative;
+    margin-bottom: 8px;
 }
-.want-it:active {
-    background: linear-gradient(#d74531, #e1613e);
-    box-shadow: inset 0px 2px 2px #942718;
+
+.hits-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 61px;
+    height: 61px; 
+    border-radius: 50%;
+    background: url("../img/hit.jpg") no-repeat;
+    z-index: 100;
+}
+.item-price {
+    position: absolute;
+    bottom: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.item-price-cost {
+    font-size: 45px;
+    line-height: 45px;
+    
+    
+}
+.item-price-units {
+    position: relative;
+    font-size: 30px;
+    line-height: 45px;
+    padding-left: 32px;
+}
+.item-price-units::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 31px;
+    height: 36px;
+    background: transparent url("../img/icon-ruble-shadow.svg") no-repeat 50% 50%;
+    
+}
+.item-title {
+    
+    margin-top: 0;
+    margin-bottom: 7px;
+    
+    
+    
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    
+    
+}
+.item-title span {
+   
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.item-btn-wrapper {
+    position: absolute;
+    bottom: -55px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+.btn-item-preview {
+    position: relative;
+    padding: 11px 13px 10px; 
+    z-index: 100;
+}
+
+.catalog-item:hover::after {
+    content: "";
+    position: absolute;
+    top: -9px; 
+    bottom: -72px; 
+    left: -10px; 
+    right: -10px; 
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+   
 }
