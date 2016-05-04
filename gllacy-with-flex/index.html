@@ -12,7 +12,7 @@
             <input type="radio" id="btn-1" name="slider-controls" checked>
             <input type="radio" id="btn-2" name="slider-controls">
             <input type="radio" id="btn-3" name="slider-controls">
-            <div class="container">
+            <div class="container container-gradient">
                 <div class="theme-slider-controls">
                     <label for="btn-1"></label>
                     <label for="btn-2"></label>
@@ -26,7 +26,7 @@
                         <ul class="main-list">
                             <li class="main-menu-item">
                                 <a href="#">Каталог</a>
-                                <ul class="main-submenu">
+                                <ul class="main-submenu pop-up">
                                     <li class="main-submenu-item"><a href="#">Новинки</a></li>
                                     <li class="main-submenu-item"><a href="catalog.html">Сливочное</a></li>
                                     <li class="main-submenu-item"><a href="#">Щербеты</a></li>
@@ -43,46 +43,53 @@
                         </ul> 
                     </nav>
                     <div class="user-block">
-                        <div class="user-block-item">
+                        <div class="user-block-search user-block-item">
                             <a class="search-btn" href="#"></a>
-                            <form class="search-form">
-                                <input type="text" name="search" placeholder="Что ищем?" required>
+                            <form class="search-form pop-up">
+                                <input class="search-input text-field" type="text" name="search" placeholder="Что ищем?" required>
                             </form>
                         </div>
-                        <div class="user-block-item">
+                        <div class="user-block-login user-block-item">
                             <a class="login-btn" href="#">Вход</a>
-                            <form class="login-form">
-                                <input type="email" name="login-mail" placeholder="Электронная почта" required>
-                                <input type="password" name="login-mail" placeholder="Пароль" required>
-                                <input type="submit" id="login-btn" name="login-btn" value="Войти">
-                                <a class="forgot-password" href="#">Забыли пароль?</a>
-                                <a class="new-registration" href="#">Новая регистрация</a>
+                            <form class="login-form pop-up">
+                                <input class="text-field login-input" type="email" name="login-mail" placeholder="Электронная почта" required>
+                                <input class="text-field login-input" type="password" name="login-mail" placeholder="Пароль" required>
+                                <input class="btn login-submit-btn" type="submit" id="login-btn" name="login-btn" value="Войти">
+                                <div class="login-form-links">
+                                    <a class="forgot-password" href="#">Забыли пароль?</a>
+                                    <a class="new-registration" href="#">Новая регистрация</a>
+                                </div>
                             </form>
                         </div>
-                        <div class="user-block-item">
+                        <div class="user-block-basket user-block-item">
                             <a class="basket-btn" href="#">Пусто</a>
-                            <div class="basket">
-                                <table>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Пломбир с апельсиновым джемом</td>
-                                        <td>1,5 кг х 200 руб.</td>
-                                        <td>300 руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                                        <td>1,5 кг х 300 руб</td>
-                                        <td>450 руб.</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4"></td>
-                                        <td><b>Итого: 750руб.</b></td>
-                                    </tr>
-                                </table>
-                                <a class="btn place-order-btn" href="#">Разместить заказ</a>
+                            <div class="basket pop-up">
+                                <div class="basket-table">
+                                    <div class="basket-column-delete basket-table-column"></div>
+                                    <div class="basket-column-image basket-table-column"></div>
+                                    <div class="basket-column-title basket-table-column"></div>
+                                    <div class="basket-column-price basket-table-column"></div>
+                                    <div class="basket-column-sum basket-table-column"></div>
+                                    <ul>
+                                        <li>x</li>
+                                        <li></li>
+                                        <li>Пломбир с апельсиновым джемом</li>
+                                        <li>1,5 кг х 200 руб.</li>
+                                        <li>300 руб.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>x</li>
+                                        <li></li>
+                                        <li>Клубничный пломбир с присыпкой из белого шоколада</li>
+                                        <li>1,5 кг х 300 руб</li>
+                                        <li>450 руб.</li>
+                                    </ul>
+                                    <ul>
+                                        <li colspan="3"></li>
+                                        <li><b>Итого: 750руб.</b></li>
+                                    </ul>
+                                </div>
+                                <a class="btn place-order-btn" href="#">Оформить заказ</a>
                             </div>
                         </div> 
                     </div>    
@@ -178,76 +185,88 @@
                         </div>
                     </section>
                     <section class="about">
-                        <h2 class="about-gllacy">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженного
+                        <h2 class="about-gllacy">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженного
                              собственного производства на развес</h2>
                         <div class="about-features">
-                            <p class="features-production">Все наше мороженое изготавливается на собственном производстве, с использованием 
-                                современного оборудования и проверенных временем технологий.</p>
-                            <p class="features-suppliers">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
-                                с которыми нас связывает долговременное сотрудничество.</p>  
-                            <p class="features-ingredients">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
-                                Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
-                            <p class="features-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает 
-                                мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>  
+                            <div class="about-features-row">
+                                <p class="features-production">Все наше мороженое изготавливается на собственном производстве, с использованием 
+                                    современного оборудования и проверенных временем технологий.</p>
+                                <p class="features-suppliers">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
+                                    с которыми нас связывает долговременное сотрудничество.</p>  
+                            </div>   
+                            <div class="about-features-row"> 
+                                <p class="features-ingredients">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
+                                    Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+                                <p class="features-delivery">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает 
+                                    мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>  
+                            </div>
                         </div>
                     </section>
                     <section class="additional">
-                        <article class="additional-left blog-card">
+                        <article class="additional-column blog-card">
                             <span>Новое в нашем блоге</span>
-                            <h3 class="blog-entry-title"><a href="#">10  способов сервировки фруктовых щербетов к столу</a></h3>
+                            <h3 class="blog-card-title"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
                         </article>
-                        <section class="additional-right subscribe-card">
-                            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и 
-                                не слать всякой не нужной ерунды. Честно =)</p>
-                            <form class="subscribe-form">
-                                <input class="btn" type="submit" id="subscribe-btn" name="subscribe-btn" value="Отправить">
-                                <div class="field">
-                                    <input class="email" type="email" name="email" placeholder="введите email" required>
-                                </div>
-                            </form>
+                        <section class="additional-column subscribe-card">
+                            <div class="subscribe-card-wrapper">
+                                <p class="subscribe-card-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и 
+                                    не слать всякой не нужной ерунды. Честно =)</p>
+                                <form class="subscribe-form">
+                                    <input class="email text-field" type="email" name="email" placeholder="Электронная почта" required>
+                                    <input class="btn" type="submit" id="subscribe-btn" name="subscribe-btn" value="Отправить">
+                                </form>
+                            </div>
                         </section>
                     </section>
-                    <section class="contacts">
-                        <div class="contacts-content">
-                            <p>Адрес главного офиса и офлайн магазина:<br>
-                                <span>ул. Большая Конюшенная<br> 
-                                19/8, Санкт-Петербург</span></p>
-                            <p>Для заказов по телефону:<br>
-                                <span>8 812 450-25-25</span><br>
-                                (с 10 до 20 ежедневно)</p>
-                            <a class="btn leave-feedback" href="#"></a>
-                        </div>
-                        <form class="feedback-form">
-                            <span class="feedback-form-title">Мы обязательно вам ответим!</span>
-                            <input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
-                            <input type="email" name="feedback-mail" placeholder="Ваша почта для ответа?" required>
-                            <textarea name="feedback-content" placeholder="Напишите что-нибудь..."></textarea>
-                            <input class="btn" type="submit" id="feedback-btn" name="feedback-btn" value="Отправить">
-                        </form>
-                    </section>
+                   
                 </main>
             </div>
-            <div class="map">
-                <!-- map -->
-                <img src="img/map.jpg" width="1200" height="429" alt="Карта">
-            </div>
+            <section class="contacts">
+                <div class="contacts-content">
+                    <p class="contacts-address">Адрес главного офиса и<br>
+                       офлайн магазина:<br>
+                        <span>ул. Большая Конюшенная<br> 
+                        19/8, Санкт-Петербург</span></p>
+                    <p class="contacts-num">Для заказов по телефону:<br>
+                        <span>8 812 450-25-25</span>
+                        (с 10 до 20 ежедневно)</p>
+                    <a class="btn leave-feedback-btn" href="#">Форма обратной связи</a>
+                </div>
+                <form class="feedback-form">
+                    <span class="feedback-form-title">Мы обязательно вам ответим!</span>
+                    <input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
+                    <input type="email" name="feedback-mail" placeholder="Ваша почта для ответа?" required>
+                    <textarea name="feedback-content" placeholder="Напишите что-нибудь..."></textarea>
+                    <input class="btn" type="submit" id="feedback-btn" name="feedback-btn" value="Отправить">
+                </form>
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=MiR7gi6kWPMou124GyAqyTyT6PhvHsFr&width=100%&height=429&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+                    <!--<img src="img/map.jpg" width="1200" height="429" alt="Карта">-->
+                </div>
+            </section>
             <div class="container">
                 <footer class="main-footer">
                     <div class="footer-social">
-                        <a class="social-btn social-btn-twit" href="#">Твиттер</a>
-                        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-                        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-                        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+                        <a class="social-btn social-btn-twit" href="#"></a>
+                        <a class="social-btn social-btn-inst" href="#"></a>
+                        <a class="social-btn social-btn-fb" href="#"></a>
+                        <a class="social-btn social-btn-vk" href="#"></a>
                     </div>
                     <div class="footer-links">
-                        <a class="footer-providers" href="#">&hearts; Для поставщиков</a>
-                        <a class="footer-documents" href="#">Наши документы</a>
-                        <a class="footer-production" href="#">О производстве</a>
-                        <a class="footer-ecostandarts" href="#">Экологические стандарты</a>
+                        <div class="footer-links-table">
+                            <ul>
+                                <li><a class="footer-providers" href="#">Для поставщиков</a></li>
+                                <li><a class="footer-documents" href="#">Наши документы</a></li>
+                            </ul>
+                            <ul>
+                                <li><a class="footer-production" href="#">О производстве</a></li>
+                                <li><a class="footer-ecostandarts" href="#">Экологические стандарты</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="footer-copyright">
-                        <a href="https://htmlacademy.ru/"><img src="img/html-academy-logo.svg" width="108" height="38" alt="Логотип «HTML Academy»"></a>
-                        <p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2016</p>
+                        <a class="htmlacademy-logo" href="https://htmlacademy.ru/"><img src="img/html-academy-logo.svg" width="108" height="38" alt="Логотип «HTML Academy»"></a>
+                        <p class="footer-copyright-text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2016</p>
                     </div>
                 </footer>
             </div>
