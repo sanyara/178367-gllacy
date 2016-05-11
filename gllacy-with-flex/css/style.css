@@ -112,10 +112,34 @@ h2 {
     padding: 8px 14px 9px;
     font-size: 14px;
     line-height: 24px;
+    font-weight: bold;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
     box-sizing: border-box;
 }
+.placeholder-group {
+    position: relative;
+}
+.text-field ~ label {
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    color: #999999;
+    font-size: 14px;
+    line-height: 24px;
+    pointer-events:none;
+}
+.text-field-2 ~ label {
+    font-size: 16px;
+}
+.text-field:focus ~ label, .text-field:valid ~ label {
+  top:-15px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+}
+
+
 .text-field:hover {
     box-shadow: inset 0 0 0 1px #c7c6c5;
 }
@@ -286,7 +310,7 @@ h2 {
 }
 .login-input {
     width: 240px;
-    padding: 9px 16px 9px;
+    padding: 9px 14px 9px;
     margin-bottom: 20px;
 }
 .login-submit-btn {
@@ -925,7 +949,7 @@ h2 {
     width: 95%;
     bottom: 35px;   
 }
-.subscribe-form .email {
+.subscribe-mail {
     width: 58.5%;
     flex-grow: 1;
     font-size: 16px;
@@ -1057,6 +1081,7 @@ h2 {
     display: block;
     width: 266px;
     margin-bottom: 20px;
+    padding-left: 14px;
     font-size: 16px;
     line-height: 24px;
 }
