@@ -32,19 +32,13 @@ var close = popup.querySelector(".modal-close-btn");
 var login = popup.querySelector("[name=feedback-name]");
 var form = popup.querySelector(".feedback-form");
 var email = popup.querySelector("[name=feedback-mail]");
-var storage = localStorage.getItem("login");
 var overlay = document.querySelector(".modal-overlay");
+
 link.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.add("modal-content-show");
 	overlay.classList.add("modal-content-show");
-	
-    if (storage) {
-        login.value = storage;
-        email.focus();
-    } else {
-        login.focus();
-    }
+	login.focus();
  });
 close.addEventListener("click", function(event) {
     event.preventDefault();
@@ -55,8 +49,6 @@ form.addEventListener("submit", function(event) {
     if (!login.value || !email.value) {
         event.preventDefault();
         console.log("Нужно ввести логин и пароль"); 
-    } else {
-        localStorage.setItem("login", login.value);
     }
 });
 window.addEventListener("keydown", function(event) {
