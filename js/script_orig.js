@@ -33,35 +33,51 @@ var login = popup.querySelector("[name=feedback-name]");
 var form = popup.querySelector(".feedback-form");
 var email = popup.querySelector("[name=feedback-mail]");
 var overlay = document.querySelector(".modal-overlay");
+var textInputs = form.querySelectorAll("*[required]");
+var submitBtn = form.querySelector("input[type='submit']");
 
 link.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.add("modal-content-show");
-	overlay.classList.add("modal-content-show");
+	overlay.classList.add("modal-overlay-show");
 	login.focus();
  });
 close.addEventListener("click", function(event) {
     event.preventDefault();
     popup.classList.remove("modal-content-show");
-	overlay.classList.remove("modal-content-show");
+	overlay.classList.remove("modal-overlay-show");
+	form.classList.remove("modal-error");
  });
 form.addEventListener("submit", function(event) {
     if (!login.value || !email.value) {
         event.preventDefault();
-        console.log("Нужно ввести логин и пароль"); 
     }
 });
+
+submitBtn.addEventListener("mousedown", function(event) {
+		form.classList.remove("modal-error");
+ });
+submitBtn.addEventListener("mouseup", function(event) {
+	for (var i = 0; i < textInputs.length; i++) {
+    if (textInputs[i].checkValidity() == false) {
+		form.classList.add("modal-error");
+	}
+}
+ });
+ 
 window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27) {
         if (popup.classList.contains("modal-content-show")) {
             popup.classList.remove("modal-content-show");
-			overlay.classList.remove("modal-content-show");
+			overlay.classList.remove("modal-overlay-show");
+			form.classList.remove("modal-error");
         }
     }
 });
 overlay.addEventListener("click", function(event) {
 	if (popup.classList.contains("modal-content-show")) {
             popup.classList.remove("modal-content-show");
-			overlay.classList.remove("modal-content-show");
+			overlay.classList.remove("modal-overlay-show");
+			form.classList.remove("modal-error");
         }
 });

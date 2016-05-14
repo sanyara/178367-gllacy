@@ -34,7 +34,7 @@ body {
 body {
     font-size: 16px;  
     line-height: 18px;
-    font-family: "Roboto", Arial, sans-serif; /*?*/
+    font-family: "Roboto", Arial, sans-serif;
     font-weight: normal;
     color: #fff;    
 }
@@ -159,6 +159,9 @@ h2 {
 .text-field:focus {
     outline: none;
     box-shadow: inset 0 0 0 1px #8fbdec;
+}
+.text-field:required:invalid {
+    outline: none;
 }
 .theme-slider-controls {
    position: absolute;
@@ -526,7 +529,7 @@ h2 {
 }
 .store-tel {
     display: block;
-    font-family: "Roboto Black";
+    font-family: "Roboto Black", Arial, sans-serif;
     font-size: 22px;
     line-height: 24px;
 }
@@ -551,6 +554,7 @@ h2 {
     position: absolute;
     top: 0;
     right: -15px;
+    color: #fff;
 }
 .breadcrumbs a:last-child::before {
     display: none;
@@ -667,7 +671,7 @@ h2 {
     width: 650px;
     top: 264px;
     left: 15px;       
-    font-family: "Roboto Black";
+    font-family: "Roboto Black", Arial, sans-serif;
     font-size: 60px;
     line-height: 60px;
     text-align: center;
@@ -816,6 +820,7 @@ h2 {
 .item-price {
     position: absolute;
     bottom: 12px;
+    width: 100%;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
@@ -890,8 +895,10 @@ h2 {
 }
 .about-gllacy {
     margin-bottom: 23px;
+    font-family: "Roboto Medium", Arial, sans-serif;
     font-size: 24px;
     line-height: 30px;
+    font-weight: normal;
 }
 .about-features-row {
     font-size: 0;
@@ -1076,6 +1083,34 @@ h2 {
     padding: 9px 27px 11px;
    
 }
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-content {
     position: absolute;
     top: 338px;
@@ -1128,9 +1163,20 @@ h2 {
     background: rgba(0, 0, 0, 0.5);
     z-index: 150;
 }
+
 .modal-content-show {
-  display: block;
+    display: block;
+    animation: bounce 0.6s;
 }
+.modal-overlay-show {
+    display: block; 
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+
 .feedback-form {
     width: 430px;
     padding: 17px 24px;
@@ -1167,6 +1213,7 @@ h2 {
 }
 .map {
     height: 430px;
+    background: #849d8f url("../img/map.jpg") no-repeat 50% 50%;
 }
 .map img {
     width: 100%;
@@ -1241,7 +1288,7 @@ h2 {
     padding: 0;
     margin: 0; 
 }
-.footer-links-table li a {
+.footer-links-table a {
     position: relative;
     display: inline-block;
     margin-bottom: 3px;
@@ -1251,8 +1298,9 @@ h2 {
     line-height: 18px;
     color: #fff;
     text-decoration: none;
+    vertical-align: top;
 }
-.footer-links-table li a::after {
+.footer-links-table a::after {
     content: "";
     position: absolute;
     left: 20px;
@@ -1368,6 +1416,9 @@ input[name="slider-controls"],
     background-color: #f8f7f4;
     border-radius: 50%;
     cursor: pointer;
+}
+.toggle:hover {
+    box-shadow: 0 0 0 1px #f8f7f4;
 }
 .min-toggle {
     top: 8px;
@@ -1511,17 +1562,9 @@ input[name="slider-controls"],
 .paginator {
     width: 300px;
     margin-left: auto;
+    padding: 6px 1px;
     text-align: right;
     font-size: 0;
-    counter-reset: flag;
-}
-.paginator a:not(:first-child):not(:last-child)::before {
-    position: absolute;
-    top: 4px;
-    left: 50%;
-    margin-left: -4px;
-    content: counter(flag);
-    counter-increment: flag;
 }
 .paginator a {
     position: relative;
@@ -1529,23 +1572,38 @@ input[name="slider-controls"],
     width: 26px;
     height: 26px;
     margin-right: 3px;
-    border-radius: 50%;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     line-height: 18px;
     vertical-align: top;
+    text-align: center;
+    z-index: 0;
 }
-.paginator a:not(:first-child):not(:last-child):hover {
+.paginator a:not(:first-child):not(:last-child):hover::before,
+.paginator .active-page::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 0px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    z-index: -1;
     background: rgba(255, 255, 255, 0.3);
 }
-.paginator .active-page,
-.paginator a:not(:first-child):not(:last-child):active {
+.paginator .active-page::before,
+.paginator a:not(:first-child):not(:last-child):active::before {
     background: #fff;
+    color: #323232;
+}
+.paginator a:active,
+.paginator .active-page {
     color: #323232;
 }
 .paginator .prev,
 .paginator .next {
+    width: 20px;
     font-size: 0;
 }
 .paginator .next {
@@ -1555,15 +1613,16 @@ input[name="slider-controls"],
 .next::before {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 3px;
     left: 8px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-top-style: none;
     border-right-style: none;
     width: 8px;
     height: 8px;  
 }
 .prev::before {
+    left: 3px;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -1572,11 +1631,20 @@ input[name="slider-controls"],
     -webkit-transform: rotate(-135deg);
         -ms-transform: rotate(-135deg);
             transform: rotate(-135deg);
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-top-style: none;
     border-right-style: none;
 }
 .footer-catalog {
-    margin-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    margin-top: 20px;
+}
+.footer-catalog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2.25%;
+    right: 2.25%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);;
 }
