@@ -221,9 +221,12 @@ h2 {
 #btn-3:checked ~ .layout .slider .slider-item--3 {
     display: block;
 }
+.catalog-gradient {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 39%);
+}
 .layout {
     min-width: 900px;
-    background: #849d8f;
+    background-color: #849d8f;
 }
 .container {
     position: relative;
